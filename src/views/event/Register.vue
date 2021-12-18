@@ -7,10 +7,18 @@
 
 <script>
     export default {
-        name: 'EventDetails',
+        name: 'EventRegister',
         props: ['event'],
+        inject: ['GStore'],
         methods: {
             register() {
+                // Set up a flash message
+                this.GStore.flashMessage = 'You are successfully registered for ' + this.event.title;
+
+                setTimeout(() => {
+                    this.GStore.flashMessage = '';
+                }, 3000);
+
                 // Redirect back to the event details page (should be once successfully submitted)
                 this.$router.push({
                     name: 'EventDetails',
