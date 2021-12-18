@@ -55,7 +55,18 @@ export default {
           this.totalEvents = response.headers['x-total-count']
         })
         .catch(error => {
-          console.log(error)
+          if (error.response && error.response.status == 404) {
+            this.$router.push({
+                name: '404Resource',
+                params: {
+                    resource: 'events'
+                }
+            });
+          } else {
+            this.$router.push({
+              name: 'NetworkError'
+            });
+          }
         })
       })
   },
