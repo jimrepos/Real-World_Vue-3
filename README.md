@@ -1,4 +1,6 @@
 # real-world-vue
+This project is based on the tutorial by Vue Mastery.
+Currently hosted at https://vue-mastery-real-world-vue-3.jamesmountford.me/
 
 ## Project setup
 ```
