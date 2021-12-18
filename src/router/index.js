@@ -8,7 +8,11 @@ const routes = [
   {
     path: '/',
     name: 'EventList',
-    component: EventList
+    component: EventList,
+    props: route => ({
+      page: parseInt(route.query.page, 10) || 1,
+      perPage: parseInt(route.query.perPage, 10) || 2
+    })
   },
   {
     path: '/event/:id',

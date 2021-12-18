@@ -26,6 +26,9 @@
 
 #nav a, #footer a {
   font-weight: bold;
+}
+
+a {
   color: #2c3e50;
 }
 
